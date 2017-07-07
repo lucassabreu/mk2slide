@@ -1,4 +1,10 @@
-# Culture Code Coderockr
+---
+title: "Culture Code Coderockr"
+width: 1024px
+height: 800px
+---
+
+# Culture Code **Coderockr**
 
 [http://coderockr.com](http://coderockr.com)
 
@@ -94,7 +100,7 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ***
 
-## Primeira pergunta que fazemos antes de criar uma nova tarefa
+### Primeira pergunta que fazemos antes de criar uma nova tarefa
 
 > Que valor vamos gerar com esta tarefa?
 

@@ -1,11 +1,7 @@
 #!/bin/bash
 
-echo "<section>
-
-$(sed 's|\*\*\*|</section><section>|' "CultureCode.md")
-
-</section>" | \
+sed 's|\*\*\*|</section><section>|' "CultureCode.md" | \
 	pandoc --standalone --from markdown --to html5 \
-		-H template.html \
+		--template template.html \
 		-o "slide.html"
 

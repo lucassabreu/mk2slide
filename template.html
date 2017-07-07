@@ -1,11 +1,113 @@
-<style>
-    body, html {
-    }
-    
-    hr {
-        page-break-before: always;
-    }
-</style>
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="pandoc">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    $for(author-meta)$
+        <meta name="author" content="$author-meta$">
+    $endfor$
+    $if(date-meta)$
+        <meta name="dcterms.date" content="$date-meta$">
+    $endif$
+    $if(keywords)$
+        <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
+    $endif$
+    $if(title)$
+    <title>$title$</title>
+    $endif$
+    $for(header-includes)$
+      $header-includes$
+    $endfor$
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
 
-<script type="javascript">
-</script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style type="text/css">
+$if(quotes)$ q { quotes: "“" "”" "‘" "’"; } $endif$
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@page {
+    size: $width$ $height$;
+    margin: 0;
+}
+
+body, html {
+    font-family: Open Sans, sans-serif;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: calc($width$ / 35);
+    width: 100%;
+    height: 100%;
+}
+
+body, html, section {
+    display: block;
+    vertical-align: middle;
+}
+
+section {
+    page-break-before: avoid;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+
+    width: $width$;
+    height: $height$;
+    margin: calc(100vh - $height$) auto;
+}
+
+section:first-of-type {
+    margin-top: calc((100vh - $height$) / 2);
+}
+
+a, a:hover, a:visited, a:active {
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1em;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h1 strong, h2 strong, h3 strong, h4 strong {
+    color: #fe7c00;
+}
+
+img.background {
+    display: none;
+}
+
+code {
+    white-space: pre;
+}
+    </style>
+</head>
+<body>
+    <section>
+    $body$
+    </section>
+</body>
+</html>
