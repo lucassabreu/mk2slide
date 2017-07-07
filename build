@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "<section>
+
+$(sed 's|\*\*\*|</section><section>|' "CultureCode.md")
+
+</section>" | \
+	pandoc --standalone --from markdown --to html5 \
+		-H template.html \
+		-o "slide.html"
+
