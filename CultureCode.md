@@ -1,18 +1,16 @@
 ---
 title: "Culture Code Coderockr"
-width: 1024px
-height: 800px
+width: 710px
+height: 460px
 ---
 
 # Culture Code **Coderockr**
 
-[http://coderockr.com](http://coderockr.com)
-
-![](http://coderockr.com/images/coderockr.svg){.background}
+#### [http://coderockr.com](http://coderockr.com)
 
 ***
 
-# Nosso Propósito
+## Nosso Propósito
 
 ***
 
@@ -22,7 +20,7 @@ Criar softwares incríveis e ajudar outras empresas e desenvolvedores a fazerem 
 
 ***
 
-# Nossa Missão
+## Nossa Missão
 
 ***
 
@@ -30,7 +28,7 @@ Criar soluções inovadoras e de alta qualidade utilizando as tecnologias mais m
 
 ***
 
-# Nossa Visão
+## Nossa Visão
 
 ***
 
@@ -38,65 +36,65 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ***
 
-# Nossos Valores
+## Nossos Valores
 
 ***
 
-## Cooperação
+### Cooperação
 
 > Temos o mindset Open Source
 
 ***
 
-## Ética
+### Ética
 
 > Fazemos o que é certo, da maneira correta
 
 ***
 
-## Respeito
+### Respeito
 
 > Respeitamos opiniões e escolhas
 
 ***
 
-## Curiosidade
+### Curiosidade
 
 > Não nos sentimos confortáveis com o que sabemos
 
 ***
 
-## Entusiasmo
+### Entusiasmo
 
 > Amamos o que fazemos
 
 ***
 
-## Comprometimento
+### Comprometimento
 
 > Nos comprometemos com nossos clientes e nossas carreiras
 
 ***
 
-## Iniciativa
+### Iniciativa
 
-> Não esperamos que nos digam o que fazer, buscamos o melhor e temos autonomia para resolver problemas e apresentar soluções. 
+> Não esperamos que nos digam o que fazer, buscamos o melhor e temos autonomia para resolver problemas e apresentar soluções.
 
 ***
 
-## Foco na solução e não no problema
+### Foco na solução e não no problema
 
 > Resolvemos problemas e não achamos culpados
 
 ***
 
-# Como fazemos?
+## Como fazemos?
 
 ***
 
-## Geramos valor
+### Geramos valor
 
-> Temos paixão por gerar valor e não apenas em criar o código mais bonito. 
+> Temos paixão por gerar valor e não apenas em criar o código mais bonito.
 
 ***
 
@@ -110,13 +108,13 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ***
 
-## Evitamos o *Gold plating* 
+### Evitamos o *Gold plating*
 
 > in software engineering, or project management, or time management in general, is the error of continuing to work on a project or task well past the point where the extra effort is worth the value it adds (if any)
 
 ***
 
-## Ninguém é "dono" do código
+### Ninguém é "dono" do código
 
 > O código é do projeto.
 
@@ -124,7 +122,7 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ***
 
-## Pair review
+### Pair review
 
 > Todas as tarefas passam por review dos nossos pares.
 
@@ -132,11 +130,11 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ***
 
-# Usamos métricas
+## Usamos métricas
 
 ***
 
-## Nosso Cycle Time deve ser sempre abaixo de **48 horas**
+Nosso Cycle Time deve ser sempre abaixo de **48 horas**
 
 > Cycle Time is the difference between the moment when an item is considered 'in progress' to the moment the item enters its Final state.
 
@@ -144,15 +142,15 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ***
 
-## Não pode existir "trabalho oculto"
+### Não pode existir "trabalho oculto"
 
-> Quando estivermos trabalhando em algum projeto, seja da Coderockr ou de clientes, sempre deve haver uma tarefa no Trello, Github Issues, etc. 
+> Quando estivermos trabalhando em algum projeto, seja da Coderockr ou de clientes, sempre deve haver uma tarefa no Trello, Github Issues, etc.
 
 [Leia mais...](https://blog.planrockr.com/innersource-c0bd795289dd#.tnhqey888)
 
 ***
 
-## Anotamos o tempo que trabalhamos em cada tarefa 
+### Anotamos o tempo que trabalhamos em cada tarefa
 
 > Para podermos trabalhar cada vez menos em coisas repetitivas
 
@@ -160,7 +158,8 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ***
 
-# Não somos uma família
+## Não somos uma
+# família {.fit-text}
 
 ***
 
@@ -168,17 +167,17 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ***
 
-## Somos um time
+# Somos um **time**
 
-> ou uma banda!
-
-***
-
-## O time tem um objetivo principal: ser o **melhor**
+ou uma banda!
 
 ***
 
-## Você entra para um time porque é o melhor no que faz e porque você pode contribuir para seu crescimento
+### O time tem um objetivo principal: ser o **melhor**
+
+***
+
+### Você entra para um time porque é o **melhor no que faz** e porque você pode **contribuir para seu crescimento** {.fit-text}
 
 ***
 
@@ -186,5 +185,5 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ***
 
-## Somos um **time** e usamos nossos **valores** e **métricas** para atingir nosso **propósito**
+### Somos um **time** e usamos nossos **valores** e **métricas** para atingir nosso **propósito** {.fit-text}
 

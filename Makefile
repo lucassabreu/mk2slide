@@ -1,7 +1,10 @@
 all: clean html
 
 html:
-	./build
+	./build html
+
+pdf:
+	./build pdf
 
 clean:
 	rm -f slide.html

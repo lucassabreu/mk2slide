@@ -23,86 +23,139 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <![endif]-->
 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="></script>
+    <script src="fit-content.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <style type="text/css">
-$if(quotes)$ q { quotes: "“" "”" "‘" "’"; } $endif$
+        $if(quotes)$ q { quotes: "“" "”" "‘" "’"; } $endif$
 
-* {
-    padding: 0;
-    margin: 0;
-}
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-@page {
-    size: $width$ $height$;
-    margin: 0;
-}
+        @page {
+            size: $width$ $height$;
+            margin: 0;
+            padding: 0;
+        }
 
-body, html {
-    font-family: Open Sans, sans-serif;
-    text-align: center;
-    line-height: 1.5rem;
-    font-size: calc($width$ / 35);
-    width: 100%;
-    height: 100%;
-}
+        body, html {
+            font-family: "Open Sans", sans-serif;
+            text-align: center;
+            line-height: 1.5rem;
+            font-size: calc($width$ / 30);
+            width: 100%;
+            height: 100%;
+            background: gray;
+        }
 
-body, html, section {
-    display: block;
-    vertical-align: middle;
-}
+        body, html, section {
+            display: block;
+        }
 
-section {
-    page-break-before: avoid;
-    display: flex;
+        section {
+            page-break-before: avoid;
+            display: flex;
 
-    flex-direction: column;
-    justify-content: center;
+            flex-direction: column;
+            justify-content: center;
 
-    width: $width$;
-    height: $height$;
-    margin: calc(100vh - $height$) auto;
-}
+            overflow: hidden;
+            width: calc($width$ - 2rem);
+            height: calc($height$ - 4rem);
+            margin: calc(100vh - $height$ - 2rem) auto;
+            padding: 2rem 1rem;
+            background: white;
+        }
 
-section:first-of-type {
-    margin-top: calc((100vh - $height$) / 2);
-}
+        @media print {
+            section {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+        }
 
-a, a:hover, a:visited, a:active {
-    color: inherit;
-}
+        a, a:hover, a:visited, a:active {
+            color: inherit;
+        }
 
-h1, h2, h3, h4 {
-    line-height: 1em;
-    font-weight: 700;
-}
+        h1, h2, h3, h4 {
+            line-height: 1em;
+            font-weight: 800;
+            padding: .5rem;
+        }
 
-h1 {
-    font-size: 4rem;
-}
+        h1 {
+            font-size: 4rem;
+        }
 
-h2 {
-    font-size: 3.5rem;
-}
+        h2 {
+            font-size: 3rem;
+        }
 
-h3 {
-    font-size: 3rem;
-}
+        h3 {
+            font-size: 1.5rem;
+        }
 
-h4 {
-    font-size: 2rem;
-}
+        h4 {
+            font-size: 1rem;
+        }
 
-h1 strong, h2 strong, h3 strong, h4 strong {
-    color: #fe7c00;
-}
+        section h2 ~ :not(h1):not(h2):not(h3):not(h4):last-child,
+        section h3 ~ :not(h1):not(h2):not(h3):not(h4):last-child,
+        section h4 ~ :not(h1):not(h2):not(h3):not(h4):last-child {
+            flex-grow: 2;
+        }
 
-img.background {
-    display: none;
-}
+        h1 strong, h2 strong, h3 strong, h4 strong, blockquote {
+            color: #fe7c00;
+        }
 
-code {
-    white-space: pre;
-}
+        .fit-text {
+            flex-grow: 5;
+            overflow: hidden;
+        }
+
+        p, blockquote {
+            padding: .1rem 1.5rem;
+        }
+
+        blockquote p {
+            padding: .5rem 0;
+        }
+
+        blockquote p:first-child {
+            padding-top: 0;
+        }
+
+        blockquote {
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li p:before {
+            content: "\21E2";
+            margin-right: 1ex;
+            margin-left: -3ex;
+            font-weight: bold;
+        }
+
+        img.background {
+            display: none;
+        }
+
+        code {
+            white-space: pre;
+        }
     </style>
 </head>
 <body>
