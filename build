@@ -3,5 +3,5 @@
 sed 's|\*\*\*|</section><section>|' "CultureCode.md" | \
 	pandoc --standalone --from markdown+emoji --to html5 \
 		--template template.html --self-contained \
-		-o "slide.$1"
+		-o "$1"
 

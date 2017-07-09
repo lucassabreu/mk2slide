@@ -110,7 +110,9 @@ Ser referência de excelência e inovação no desenvolvimento de soluções tec
 
 ### Evitamos o *Gold plating*
 
-> in software engineering, or project management, or time management in general, is the error of continuing to work on a project or task well past the point where the extra effort is worth the value it adds (if any)
+> in software engineering, or project management, or time management in general, is the error of
+> continuing to work on a project or task well past the point where the extra effort is worth the
+> value it adds (if any)
 
 ***
 
@@ -159,7 +161,7 @@ Nosso Cycle Time deve ser sempre abaixo de **48 horas**
 ***
 
 ## Não somos uma
-# família {.fit-text}
+## família {.fit}
 
 ***
 
@@ -167,17 +169,18 @@ Nosso Cycle Time deve ser sempre abaixo de **48 horas**
 
 ***
 
-# Somos um **time**
+# Somos um **time** {.fit}
 
 ou uma banda!
 
 ***
 
-### O time tem um objetivo principal: ser o **melhor**
+# O time tem um objetivo principal: {.fit}
+# ser o **melhor**
 
 ***
 
-### Você entra para um time porque é o **melhor no que faz** e porque você pode **contribuir para seu crescimento** {.fit-text}
+### Você entra para um time porque é o **melhor no que faz** e porque você pode **contribuir para seu crescimento** {.fit}
 
 ***
 
@@ -185,5 +188,5 @@ ou uma banda!
 
 ***
 
-### Somos um **time** e usamos nossos **valores** e **métricas** para atingir nosso **propósito** {.fit-text}
+### Somos um **time** e usamos nossos **valores** e **métricas** para atingir nosso **propósito** {.fit}
 

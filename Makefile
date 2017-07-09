@@ -1,10 +1,13 @@
 all: clean html
 
-html:
-	./build html
+dist-folder:
+	mkdir -p dist
 
-pdf:
-	./build pdf
+html: dist-folder
+	./build dist/slides.html
+
+pdf: dist-folder
+	./build dist/slides.pdf
 
 clean:
-	rm -f slide.html
+	rm -rf dist

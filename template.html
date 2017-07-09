@@ -25,13 +25,14 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="></script>
-    <script src="fit-content.js"></script>
+    <script src="scripts.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <style type="text/css">
         $if(quotes)$ q { quotes: "“" "”" "‘" "’"; } $endif$
 
         * {
+            border: none;
             padding: 0;
             margin: 0;
             box-sizing: border-box;
@@ -47,7 +48,7 @@
             font-family: "Open Sans", sans-serif;
             text-align: center;
             line-height: 1.5rem;
-            font-size: calc($width$ / 30);
+            font-size: calc($width$ / 35);
             width: 100%;
             height: 100%;
             background: gray;
@@ -55,6 +56,7 @@
 
         body, html, section {
             display: block;
+            counter-reset: slide;
         }
 
         section {
@@ -65,18 +67,20 @@
             justify-content: center;
 
             overflow: hidden;
-            width: calc($width$ - 2rem);
-            height: calc($height$ - 4rem);
-            margin: calc(100vh - $height$ - 2rem) auto;
+            width: $width$;
+            height: $height$;
+            margin: auto;
             padding: 2rem 1rem;
             background: white;
         }
 
-        @media print {
+        @media screen and (min-height: $height$) {
+            section:first-of-type {
+                margin-top: calc((100vh - $height$) / 2);
+            }
+
             section {
-                width: 100%;
-                height: 100%;
-                margin: 0;
+                margin: calc(100vh - $height$) auto;
             }
         }
 
@@ -85,9 +89,13 @@
         }
 
         h1, h2, h3, h4 {
-            line-height: 1em;
+            line-height: 1.1em;
             font-weight: 800;
             padding: .5rem;
+        }
+
+        h1 ~ h1, h2 ~ h2, h3 ~ h3, h4 ~ h4 {
+            padding-top: 0;
         }
 
         h1 {
@@ -114,11 +122,6 @@
 
         h1 strong, h2 strong, h3 strong, h4 strong, blockquote {
             color: #fe7c00;
-        }
-
-        .fit-text {
-            flex-grow: 5;
-            overflow: hidden;
         }
 
         p, blockquote {
