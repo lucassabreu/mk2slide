@@ -74,7 +74,7 @@
             background: $if(colors.slide)$ $colors.slide$ $else$ white $endif$;
         }
 
-        section *:first-child {
+        section > *:first-child {
             padding-top: 0;
             margin-top: 0;
         }
@@ -138,7 +138,7 @@
             color: $if(colors.emphasis)$ $colors.emphasis$ $else$ inherit $endif$;
         }
 
-        p, blockquote {
+        p, blockquote, li {
             padding: .1rem 1.5rem;
         }
 
@@ -159,11 +159,16 @@
             list-style: none;
         }
 
-        ul li p:before {
+        ul li:before {
             content: "\21E2";
             margin-right: 1ex;
             margin-left: -3ex;
             font-weight: bold;
+        }
+
+        ul li p {
+            display: inline;
+            padding: 0;
         }
 
         img.background {
