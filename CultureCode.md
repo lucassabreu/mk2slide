@@ -2,6 +2,8 @@
 title: "Culture Code Coderockr"
 width: 710px
 height: 460px
+colors:
+    headerEmphasis: \#fe7c00
 ---
 
 # Culture Code **Coderockr**
