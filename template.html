@@ -68,10 +68,20 @@
 
             overflow: hidden;
             width: $width$;
-            height: $height$;
+            height: calc($height$ - 1px);
             margin: auto;
             padding: 2rem 1rem;
             background: white;
+        }
+
+        section *:first-child {
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        section *:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
         }
 
         @media screen and (min-height: $height$) {
