@@ -1,0 +1,29 @@
+#!/bin/bash
+
+[[ -z ${2+x} ]] || [[ "$@" =~ '-h' ]] || [[ "$@" =~ '--help' ]] && {
+    echo "Turn a markdown into a presentation
+
+Usage:
+
+$0 <presentation.md> <presentation.format>
+
+
+-h to get this help
+--help to get this help
+    "
+    exit 0
+}
+
+presentaion="$(realpath $1)"
+output="$(realpath $2)"
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cd $SCRIPT_DIR;
+
+
+sed 's|\*\*\*|</section><section>|' "$presentaion" | \
+	pandoc --standalone --from markdown --to html5 \
+		--template $SCRIPT_DIR/template.html --self-contained \
+		-o "$output"
+
