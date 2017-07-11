@@ -23,5 +23,5 @@ cd $SCRIPT_DIR;
 
 pandoc --standalone --from markdown --to html5 \
 	--template $SCRIPT_DIR/template.html --self-contained \
-	"$presentaion" | sed 's|<hr.*/>|</section><section>|' > $output
+	"$presentaion" | sed 's|<hr.*/>|</section>\n    <section>|' > $output
 
