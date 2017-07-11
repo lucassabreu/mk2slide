@@ -1,13 +1,10 @@
 all: clean html
 
-dist-folder:
-	mkdir -p dist
+html:
+	./mk2slide examples/CultureCode.md examples/CultureCode.html
 
-html: dist-folder
-	./build dist/slides.html
-
-pdf: dist-folder
-	./build dist/slides.pdf
+pdf:
+	./mk2slide examples/CultureCode.md examples/CultureCode.pdf
 
 clean:
-	rm -rf dist
+	rm -f examples/CultureCode.html examples/CultureCode.pdf
