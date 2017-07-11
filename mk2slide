@@ -1,27 +1,33 @@
 #!/bin/bash
 
-[[ -z ${2+x} ]] || [[ "$@" =~ '-h' ]] || [[ "$@" =~ '--help' ]] && {
-    echo "Turn a markdown into a presentation
+[[ -z ${1+x} ]] || [[ "$@" =~ '-h' ]] || [[ "$@" =~ '--help' ]] && {
+    echo "Turn a markdown into a slide
 
 Usage:
 
-$0 <presentation.md> <presentation.format>
-
+$0 <presentation.md> [options]
 
 -h to get this help
 --help to get this help
+
+Where options may be:
+--open-in-browser
+
     "
     exit 0
 }
 
-presentaion="$(realpath $1)"
-output="$(realpath $2)"
-
+input_file="$(realpath $1)"
+output_file="$(echo $input_file | rev | cut -d "."  -f1 --complement | rev ).html"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 cd $SCRIPT_DIR;
 
 pandoc --standalone --from markdown --to html5 \
 	--template $SCRIPT_DIR/template.html --self-contained \
-	"$presentaion" | sed 's|<hr.*/>|</section>\n    <section>|' > $output
+	"$input_file" | sed 's|<hr.*/>|</section>\n    <section>|' > $output_file
 
+
+[[ "$@"  =~ "--open-in-browser" ]] && {
+    $BROWSER $output_file
+}
