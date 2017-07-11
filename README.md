@@ -1,9 +1,15 @@
 # mk2slide
 
 
-A simple presentation generator from markdown files.
+A simple presentation generator from markdown files
 
 
-## Dependencies
+## Usage:
 
-- Pandoc
+```sh
+mk2slide mypresentation.md
+```
+
+## Syntax
+
+Use standard markdown with `---` to separate slides
