@@ -19,11 +19,12 @@ Where options may be:
 
 input_file="$(realpath $1)"
 
-[[ ! -z $2 ]] && output_file="$(realpath $2)"
+[[ ! -z $2 && ! "$2" =~ "--" ]] && output_file="$(realpath $2)"
 
 [[ -z $output_file ]] && output_file="$(echo $input_file | rev | cut -d "."  -f1 --complement | rev ).html"
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+[[ -L "$0" ]]; SCRIPT_DIR=$( cd "$( dirname "$( readlink -f "$0" )" )" && pwd )
 
 cd $SCRIPT_DIR;
 
