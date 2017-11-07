@@ -19,6 +19,7 @@
     $for(header-includes)$
       $header-includes$
     $endfor$
+
     <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <![endif]-->
@@ -28,6 +29,18 @@
     <script src="scripts.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    $if(use-mermaid)$
+      <script src="//unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+      <script>
+        mermaid.initialize({startOnLoad:false});
+        jQuery(function() {
+            // mermaid.initialize();
+        });
+      </script>
+      <link href="$mermaid.style$" rel="stylesheet">
+    $endif$
+
     <style type="text/css">
         $if(quotes)$ q { quotes: "“" "”" "‘" "’"; } $endif$
 
