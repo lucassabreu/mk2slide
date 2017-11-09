@@ -30,17 +30,6 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-    $if(use-mermaid)$
-      <script src="//unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
-      <script>
-        mermaid.initialize({startOnLoad:false});
-        jQuery(function() {
-            // mermaid.initialize();
-        });
-      </script>
-      <link href="$mermaid.style$" rel="stylesheet">
-    $endif$
-
     <style type="text/css">
         $if(quotes)$ q { quotes: "“" "”" "‘" "’"; } $endif$
 
@@ -204,8 +193,16 @@
     </style>
 </head>
 <body>
-    <section>
-    $body$
-    </section>
+    <section>$body$</section>
+
+    $if(use-mermaid)$
+        <link href="$mermaid.style$" rel="stylesheet">
+        <script src="//unpkg.com/mermaid@7.1.0/dist/mermaid.min.js"></script>
+        <script>
+            jQuery('.mermaid').each((i, e) => jQuery(e).replaceWith(jQuery('<div class="mermaid" />').text(e.innerText)));
+            mermaid.initialize();
+            jQuery('.mermaid').each((i, e) => jQuery(e).replaceWith(jQuery(e).find('svg:first')));
+        </script>
+    $endif$
 </body>
 </html>
