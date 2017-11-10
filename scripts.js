@@ -1,4 +1,5 @@
 $(function() {
+    flexibility(document.documentElement);
     $('.fit')
         .css('flex-grow', 4)
         .each((i, e) => maxFontSizeToFit(e))

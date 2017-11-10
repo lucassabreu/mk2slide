@@ -23,10 +23,6 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <![endif]-->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="></script>
-    <script src="scripts.js"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <style type="text/css">
         $if(quotes)$ q { quotes: "“" "”" "‘" "’"; } $endif$
@@ -61,6 +57,7 @@
 
         section {
             page-break-before: avoid;
+            -js-display: flex;
             display: flex;
 
             flex-direction: column;
@@ -188,5 +185,11 @@
     <section>
     $body$
     </section>
+
+    <script src="flexibility/flexibility.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="></script>
+    <script src="scripts.js"></script>
+
 </body>
 </html>

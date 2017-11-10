@@ -12,6 +12,7 @@ $0 <presentation.md> [output.html] [options]
 
 Where options may be:
 --open-in-browser
+--pdf
 
     "
     exit 0
@@ -23,6 +24,13 @@ input_file="$(realpath $1)"
 
 [[ -z $output_file ]] && output_file="$(echo $input_file | rev | cut -d "."  -f1 --complement | rev ).html"
 
+PDF=0
+[[ "$@" =~ "--pdf" ]] && {
+    PDF=1
+    output_file_pdf="$(echo "$output_file" | sed 's|\.html$|.pdf|')"
+    output_file=$(mktemp -d "${TMPDIR:-/tmp/}mk2slide.XXXXXXXXXXXX")/html.html
+}
+
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 [[ -L "$0" ]]; SCRIPT_DIR=$( cd "$( dirname "$( readlink -f "$0" )" )" && pwd )
 
@@ -32,7 +40,11 @@ pandoc --standalone --from markdown --to html5 \
 	--template $SCRIPT_DIR/template.html --self-contained \
 	"$input_file" | sed 's|<hr.*/>|</section>\n    <section>|' > $output_file
 
+[[ $PDF -eq 1 ]] && {
+    phantomjs "$SCRIPT_DIR/pdf/rasterize.js" "$output_file" "$output_file_pdf" '710px*460px'
+    output_file=$output_file_pdf
+}
 
 [[ "$@" =~ "--open-in-browser" ]] && {
-    $BROWSER $output_file
+    $BROWSER "$output_file"
 }

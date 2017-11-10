@@ -1,0 +1,3 @@
+[submodule "flexibility"]
+	path = flexibility
+	url = git@github.com:jonathantneal/flexibility.git
