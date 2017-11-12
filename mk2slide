@@ -31,8 +31,11 @@ cd $SCRIPT_DIR;
 pandoc --standalone --from markdown --to html5 \
 	--template $SCRIPT_DIR/template.html --self-contained \
 	"$input_file" | sed 's|<hr.*/>|</section>\n    <section>|' > $output_file
-
+EXIT_CODE=$?
 
 [[ "$@" =~ "--open-in-browser" ]] && {
     $BROWSER $output_file
+    EXIT_CODE=$?
 }
+
+exit $EXIT_CODE
