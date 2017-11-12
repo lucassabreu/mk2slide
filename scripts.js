@@ -1,10 +1,8 @@
-$(function() {
-    $('.fit')
-        .css('flex-grow', 4)
-        .each((i, e) => maxFontSizeToFit(e))
-        .css('flex-grow', '');
-    $('section').each((i, element) => element.id = 'slide-' + i);
-});
+$('.fit')
+    .css('flex-grow', 4)
+    .each((i, e) => maxFontSizeToFit(e))
+    .css('flex-grow', '');
+$('section').each((i, element) => element.id = 'slide-' + i);
 
 function maxFontSizeToFit(element) {
     var fitContent = $('<span />').html($(element).html());
