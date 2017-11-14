@@ -270,6 +270,23 @@ src: local('Open Sans Regular'), local('OpenSans-Regular'), url(data:font/ttf;ba
             John--&gt;&gt;Alice: Great!
             John-&gt;&gt;Bob: How about you?
             Bob--&gt;&gt;John: Jolly good!</code></pre>
+        </section>
+    <section>
+        <h3 id="class-diagram---experimental">Class diagram - ❗️ experimental</h3>
+        <pre class="mermaid"><code>classDiagram
+        Class01 &lt;|-- AveryLongClass : Cool
+        Class03 *-- Class04
+        Class05 o-- Class06
+        Class07 .. Class08
+        Class09 --&gt; C2 : Where am i?
+        Class09 --* C3
+        Class09 --|&gt; Class07
+        Class07 : equals()
+        Class07 : Object[] elementData
+        Class01 : size()
+        Class01 : int chimp
+        Class01 : int gorilla
+        Class08 &lt;--&gt; C2: Cool label</code></pre>
     </section>
 
     <script>/*! jQuery v3.2.1 | (c) JS Foundation and other contributors | jquery.org/license */
