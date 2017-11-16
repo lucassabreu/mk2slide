@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="generator" content="pandoc">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     $for(author-meta)$
         <meta name="author" content="$author-meta$">
     $endfor$
@@ -19,15 +19,13 @@
     $for(header-includes)$
       $header-includes$
     $endfor$
+
     <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <![endif]-->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="></script>
-    <script src="scripts.js"></script>
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
     <style type="text/css">
         $if(quotes)$ q { quotes: "“" "”" "‘" "’"; } $endif$
 
@@ -44,11 +42,17 @@
             padding: 0;
         }
 
+        @media print {
+            .mermaidTooltip {
+                display: none;
+            }
+        }
+
         body, html {
             font-family: "Open Sans", sans-serif;
             text-align: center;
-            line-height: 1.5rem;
             font-size: calc($width$ / 35);
+            line-height: 1.5rem;
             width: 100%;
             height: 100%;
             background: $if(colors.body)$ $colors.body$ $else$ gray $endif$;
@@ -82,6 +86,10 @@
         section *:last-child {
             padding-bottom: 0;
             margin-bottom: 0;
+        }
+
+        section > svg {
+            margin: auto;
         }
 
         @media screen and (min-height: $height$) {
@@ -188,11 +196,49 @@
             font-size: 14px;
             white-space: pre;
         }
+
+        section > .mermaid > svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        svg.mermaid, .mermaid svg {
+            font: normal normal 400 normal 12px / 18px "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: $if(mermaid.fontSize)$ $mermaid.fontSize$ $else$ 12px $endif$;
+            font-family: monospace;
+            max-width: 100%;
+        }
     </style>
 </head>
 <body>
     <section>
-    $body$
+        $body$
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="></script>
+    <script src="scripts.js"></script>
+    $if(use-mermaid)$
+        $if(mermaid.style)$ <link href="$mermaid.style$" rel="stylesheet"> $endif$
+        <script>
+            jQuery('.mermaid').each((i, e) => jQuery(e).replaceWith(jQuery('<div class="mermaid" />').text(e.innerText)));
+        </script>
+        <script src="http://unpkg.com/mermaid@7.1.0/dist/mermaid.js"></script>
+        <script>
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: '$if(mermaid.theme)$$mermaid.theme$$else$forest$endif$'
+            });
+            jQuery(document).ready(function() {
+                jQuery('.mermaid').each((i, e) => {
+                    const svg = jQuery(e).find('svg:first');
+                    jQuery(e).replaceWith(svg);
+                    svg
+                        .attr('style', null)
+                        .addClass('mermaid');
+                });
+            });
+        </script>
+    $endif$
 </body>
 </html>
