@@ -1,0 +1,11 @@
+{
+  "name": "mk2slide-docs",
+  "version": "0.1.0",
+  "scripts": {
+    "watch": "gitbook serve ./docs ./site",
+    "release": "gitbook build ./docs ./site"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
