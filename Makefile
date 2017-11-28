@@ -1,26 +1,30 @@
 all: clean html mermaid
 
-install:
+install: ## install mk2slide globaly
 	ln -s $(realpath ./mk2slide) /usr/local/bin/mk2slide
 
-html:
+html: ## generate generic HTML slide
 	./mk2slide examples/CultureCode.md examples/CultureCode.html
 
-mermaid:
+mermaid: ## generate Mermaid sample
 	./mk2slide examples/mermaid.md
 
-pdf:
+pdf: ## generate PDF sample
 	./mk2slide examples/CultureCode.md examples/CultureCode.pdf
 
-clean:
+clean: ## clean generated files
 	rm -f examples/CultureCode.html examples/CultureCode.pdf
 	rm -f examples/mermaid.html
 
-docs-build:
+docs-build: ## build the docs for release
 	git submodule update --init
 	cd site && git checkout master && git reset --hard master && git pull origin master
-	git submodule update --init
 	yarn run release
+	git add site
 
-docs-serve:
+docs-serve: ## start watch-server for the docs
 	yarn run watch
+
+# Absolutely awesome: http://marmelab.com/blog/2016/02/29/auto-documented-makefile.html
+help: ## show this help
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'
