@@ -2,7 +2,7 @@
   "name": "mk2slide-docs",
   "version": "0.1.0",
   "scripts": {
-    "watch": "gitbook serve ./docs /tmp/site",
+    "watch": "gitbook serve ./docs ./site",
     "release": "gitbook build ./docs /tmp/site && cp -r /tmp/site/* ./site"
   },
   "devDependencies": {

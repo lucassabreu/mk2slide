@@ -24,8 +24,4 @@ To convert your markdown to HTML just the following comand:
 mk2slide <presentation.md>
 ```
 
-A example of a valid slide file is [examples/minimum.md](https://github.com/lucassabreu/mk2slide/blob/master/examples/minimum.md), it will generate this slide: [minimum.html](examples/minimum.html).
-
----
-
-Full documentation: [click here](http://localhost:4000)
+A example of a valid slide file is [examples/minimum.md](https://github.com/lucassabreu/mk2slide/blob/master/examples/minimum.md), it will generate this slide: [minimum.html](https://mk2slide.github.io/examples/minimum.html).
