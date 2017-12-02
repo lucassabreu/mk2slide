@@ -1,13 +1,24 @@
 ---
-title: A Presentation Example
-width: 800px
-height: 600px
+title: "My title"
+width: 710px
+height: 460px
 ---
 
-# Slide Title
+# First slide
 
 ---
 
-## Second slide title
+Second slide
+------------
 
-Some content
+- item 1
+- item 1
+- item 1
+
+
+---
+
+Conclusion
+----------
+
+this is the conclusion

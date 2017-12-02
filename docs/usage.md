@@ -1,9 +1,10 @@
+Usage:
+======
 
-## Usage:
+Create a presentation
+---------------------
 
-### Create a presentation
-
-Create a file like this: (presentation.md)
+Create a markdown file like this: (presentation.md)
 
 ```md
 ---
@@ -16,7 +17,8 @@ height: 460px
 
 ---
 
-## Second slide
+Second slide
+------------
 
 - item 1
 - item 1
@@ -25,18 +27,20 @@ height: 460px
 
 ---
 
-## Conclusion
+Conclusion
+----------
 
 this is the conclusion
 
 ```
 
-## Generate the HTML
+### Generate the HTML
 
 ```sh
 mk2slide mypresentation.md
 ```
 
-## PDF
+PDF
+---
 
 `mk2slide` generate slides that are optimized for PDF generation. To export to pdf you just have to "print" the slides on your browser and save it on PDF format.

@@ -2,7 +2,7 @@ How to install
 ==============
 
 
-To install `mk2slide` into your machine you need to clone the repository in https://github.com/lucassabreu/mk2slide, to do this you can run the command:
+To install **mk2slide** into your machine you need to clone the repository in https://github.com/lucassabreu/mk2slide, to do this you can run the command:
 
 ```sh
 git clone https://github.com/lucassabreu/mk2slide
@@ -17,3 +17,7 @@ Pandoc is a dependency for the command to work, so you must install it in your s
 _If none of the OS above is yours, here is the Pandoc page about Install: [click here](https://pandoc.org/installing.html)_
 
 Once you have the repository and `pandoc`, just go the repository folder and execute the command `sudo make install`, and then you will be able to use the command `mk2slide` anywhere in your system.
+
+---
+
+Now you can create your own slides. See [Usage](usage.md) if need help !
