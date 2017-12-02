@@ -24,8 +24,6 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
     <![endif]-->
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-
     <style type="text/css">
         $if(quotes)$ q { quotes: "“" "”" "‘" "’"; } $endif$
 
@@ -61,6 +59,9 @@
         body, html, section {
             display: block;
             counter-reset: slide;
+        }
+        pre {
+            text-align: left;
         }
 
         section {
@@ -187,16 +188,6 @@
             display: none;
         }
 
-        pre {
-            text-align: left;
-        }
-
-        code {
-            font-weight: bold;
-            font-size: 14px;
-            white-space: pre;
-        }
-
         section > .mermaid > svg {
             max-width: 100%;
             max-height: 100%;
@@ -229,16 +220,36 @@
                 startOnLoad: true,
                 theme: '$if(mermaid.theme)$$mermaid.theme$$else$forest$endif$'
             });
-            jQuery(document).ready(function() {
-                jQuery('.mermaid').each((i, e) => {
-                    const svg = jQuery(e).find('svg:first');
-                    jQuery(e).replaceWith(svg);
-                    svg
-                        .attr('style', null)
-                        .addClass('mermaid');
-                });
-            });
         </script>
     $endif$
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- syntax files -->
+    $if(highlight.theme)$
+    <link rel="stylesheet" href="syntax/styles/$highlight.theme$.css">
+    $else$
+    <link rel="stylesheet" href="syntax/styles/color-brewer.css">
+    $endif$
+
+    <script src="syntax/highlight.pack.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
+
+
+            $if(use-mermaid)$
+            jQuery('.mermaid').each((i, e) => {
+                const svg = jQuery(e).find('svg:first');
+                jQuery(e).replaceWith(svg);
+                svg
+                    .attr('style', null)
+                    .addClass('mermaid');
+            });
+            $endif$
+
+        });
+    </script>
 </body>
 </html>
