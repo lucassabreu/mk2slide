@@ -34,6 +34,8 @@ this is the conclusion
 
 ```
 
+See the result here: https://mk2slide.github.io/examples/minimum.html
+
 ### Generate the HTML
 
 ```sh
