@@ -28,9 +28,14 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 cd $SCRIPT_DIR;
 
+alteredInputFile=/tmp/$(date +%s).html
+
+cat "$input_file" | tr '\n' '\r'  | sed -r 's|(`{3})([A-Za-z]{0,})([^`]*)(`{3})|<pre><code class="\2">\3</code></pre>|g' | tr '\r' '\n' > $alteredInputFile
+
+
 pandoc --standalone --from markdown --to html5 \
 	--template $SCRIPT_DIR/template.html --self-contained \
-	"$input_file" | sed 's|<hr.*/>|</section>\n    <section>|' > $output_file
+	"$alteredInputFile" | sed 's|<hr.*/>|</section>\n    <section>|' > $output_file
 EXIT_CODE=$?
 
 [[ "$@" =~ "--open-in-browser" ]] && {
