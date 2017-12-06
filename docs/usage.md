@@ -1,6 +1,8 @@
 Usage:
 ======
 
+Here is a basic usage to create a slide, there is other features beyond the basic [here](moreusage.md)
+
 Create a presentation
 ---------------------
 
@@ -45,4 +47,4 @@ mk2slide mypresentation.md
 PDF
 ---
 
-`mk2slide` generate slides that are optimized for PDF generation. To export to pdf you just have to "print" the slides on your browser and save it on PDF format.
+**mk2slide** generate slides that are optimized for PDF generation. To export to pdf you just have to "print" the slides on your browser and save it on PDF format.
