@@ -6,7 +6,7 @@
   - [Create a presentation](usage.md#create-a-presentation)
   - [About PDF](usage.md#pdf)
 - [More Usage](moreusage.md)
+  - [pandoc](usage/pandoc.md)
   - [fit](usage/fit.md)
   - [highlight](usage/highlight.md)
   - [mermaid](usage/mermaid.md)
-  - [pandoc](usage/pandoc.md)
