@@ -23,6 +23,7 @@ clean: ## clean generated files
 	rm -f examples/mermaid.html
 
 copy-examples:
+	./mk2slide examples/usage/fit.md
 	rm -r docs/examples
 	cp -r examples docs/examples
 	find docs/examples | grep '.md$$' | xargs rm
