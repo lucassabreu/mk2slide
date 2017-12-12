@@ -21,7 +21,7 @@
         }
 
         @page {
-            size: 800px 600px;
+            size: 400px 300px;
             margin: 0;
             padding: 0;
         }
@@ -35,7 +35,7 @@
         body, html {
             font-family: "Open Sans", sans-serif;
             text-align: center;
-            font-size: calc(800px / 35);
+            font-size: calc(400px / 35);
             line-height: 1.5rem;
             width: 100%;
             height: 100%;
@@ -58,8 +58,8 @@
             justify-content: center;
 
             overflow: hidden;
-            width: 800px;
-            height: calc(600px - 1px);
+            width: 400px;
+            height: calc(300px - 1px);
             margin: auto;
             padding: 2rem 1rem;
             background:  white ;
@@ -79,17 +79,17 @@
             margin: auto;
         }
 
-        @media screen and (min-height: 600px) {
+        @media screen and (min-height: 300px) {
             section:first-of-type {
-                margin-top: calc((100vh - 600px) / 2);
+                margin-top: calc((100vh - 300px) / 2);
             }
 
             section:last-of-type {
-                margin-bottom: calc((100vh - 600px) / 2);
+                margin-bottom: calc((100vh - 300px) / 2);
             }
 
             section {
-                margin: calc(100vh - 600px) auto;
+                margin: calc(100vh - 300px) auto;
             }
         }
 
@@ -189,24 +189,24 @@
 </head>
 <body>
     <section>
-        <h3 id="to-create-a-slide-with-a-title-to-cover-the-slide">To create a slide with a title to cover the slide:</h3>
-        <pre><code class="markdown">
-        # A Title to Emphasize {.fit}
-        </code></pre>
-        </section>
+<h3 id="to-create-a-slide-with-a-title-to-cover-the-slide">To create a slide with a title to cover the slide:</h3>
+<pre><code class="md">
+# A Title to Emphasize {.fit}
+</code></pre>
+</section>
     <section>
-        <h1 id="a-title-to-emphasize" class="fit">A Title to Emphasize</h1>
-        </section>
+<h1 id="a-title-to-emphasize" class="fit">A Title to Emphasize</h1>
+</section>
     <section>
-        <h3 id="some-words-should-get-more-space">Some words should get more space</h3>
-        <pre><code class="markdown">
-        ## The are moments when some words should get more
-        ## **SPACE!** {.fit}
-        </code></pre>
-        </section>
+<h3 id="some-words-should-get-more-space">Some words should get more space</h3>
+<pre><code class="md">
+## The are moments when some words should get more
+## **SPACE!** {.fit}
+</code></pre>
+</section>
     <section>
-        <h2 id="the-are-moments-when-some-words-should-get-more">The are moments when some words should get more</h2>
-        <h2 id="space" class="fit"><strong>SPACE!</strong></h2>
+<h2 id="the-are-moments-when-some-words-should-get-more">The are moments when some words should get more</h2>
+<h2 id="space" class="fit"><strong>SPACE!</strong></h2>
     </section>
 
     <script>/*! jQuery v3.2.1 | (c) JS Foundation and other contributors | jquery.org/license */

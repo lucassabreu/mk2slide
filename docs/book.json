@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "addcssjs",
+    "richquotes"
+  ],
+  "pluginsConfig": {
+    "addcssjs": {
+      "css": [
+        "./styles/extra.css"
+      ]
+    }
+  }
+}

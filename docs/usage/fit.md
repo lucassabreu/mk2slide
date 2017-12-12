@@ -7,7 +7,7 @@ This feature was created to allow slides that had only a title or that have same
 
 Here are some examples:
 
-<iframe src="../examples/minimum.html" />
+<iframe src="../examples/usage/fit.html" width="500px" height="400px" />
 
 Support
 -------

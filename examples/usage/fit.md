@@ -1,12 +1,12 @@
 ---
 title: Fit usage example
-width: 800px
-height: 600px
+width: 400px
+height: 300px
 ---
 
 ### To create a slide with a title to cover the slide:
 
-```markdown
+```md
 # A Title to Emphasize {.fit}
 ```
 
@@ -18,7 +18,7 @@ height: 600px
 
 ### Some words should get more space
 
-```markdown
+```md
 ## The are moments when some words should get more
 ## **SPACE!** {.fit}
 ```
